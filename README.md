@@ -6,11 +6,11 @@ Given a list of movie names, overlap different movie names to generate the longe
 
 For example, if you have the following list of movie names:
 
-How to Train your Dragon
-Gods and Monsters
-Dragon Ball Z: Battle of the Gods
-Monsters vs Aliens
-8 Mile
+-How to Train your Dragon
+-Gods and Monsters
+-Dragon Ball Z: Battle of the Gods
+-Monsters vs Aliens
+-8 Mile
 
 Then a possible resulting string would be:
 
