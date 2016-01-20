@@ -6,11 +6,11 @@ Given a list of movie names, overlap different movie names to generate the longe
 
 For example, if you have the following list of movie names:
 
--How to Train your Dragon.
--Gods and Monsters.
--Dragon Ball Z: Battle of the Gods.
--Monsters vs Aliens.
--8 Mile.
+- How to Train your Dragon.
+- Gods and Monsters.
+- Dragon Ball Z: Battle of the Gods.
+- Monsters vs Aliens.
+- 8 Mile.
 
 Then a possible resulting string would be:
 
@@ -25,7 +25,7 @@ aaa bbb ccc ddd eee is a valid output
 
 With the code shown above. I got a valid solution of 14182 characters lenght. However this is not the most optimal solution. You can try by yourself to optimize code and get a better solution. This code is running in less than a second and some of the elements used to solve the problem were:
 
-- Graph.
+-  Graph.
 - Memorization.
 - Recursion.
 
