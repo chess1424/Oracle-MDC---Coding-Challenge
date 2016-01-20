@@ -25,7 +25,7 @@ int compute(node** currNode)
     if((*currNode)->next.size() == 0) // No more nodes contected to currNode.
         return (*currNode)->str.length();
     
-    if((*currNode)->visited == true) // this node was already visited.
+    if((*currNode)->visited == true) // This node was already visited.
         return memorization[(*currNode)->id] = 0;
  
     (*currNode)->visited = true;
@@ -86,7 +86,7 @@ int main()
  
         // Building graph.
 
-        // Finding and connecting others nodes to newNode.
+        // Finding and connecting newNode to others nodes.
         bool conected = false;
         for(int i = 0; i < newNode->first.size(); i++)
             if(end[ newNode->first[i] ].size() > 0)
@@ -96,6 +96,7 @@ int main()
                 conected = true;
             }   
         
+ 
         // If I didn't find nodes to connect newNode. Connect new Node to root.
         if(!conected)
             root->next.push_back( make_pair(newNode , 0) );
@@ -106,12 +107,14 @@ int main()
                 for(int j = 0; j < begin[ newNode->last[i].first ].size(); j++)
                     newNode->next.push_back( make_pair( begin[ newNode->last[i].first ][j] , newNode->last[i].second ) );
         
-        // Storing all iformation of newNode.
+        // Storing all iformation of newNode
         for(int i = 0; i < newNode->last.size(); i++)
             end[ newNode->last[i].first ].push_back( make_pair( newNode , newNode->last[i].second ) );
         
         for(int i = 0; i < newNode->first.size(); i++)
             begin[ newNode->first[i] ].push_back(newNode);
+        
+ 
  
     }
     memorization = vector<int>(countID , -1); 
@@ -130,8 +133,8 @@ int main()
         aux = aux->next[aux->maxIndex].first;
     }
     out += aux->str;
-
+    
     cout<<out<<'\n';
-
+    
     return 0;
 }
